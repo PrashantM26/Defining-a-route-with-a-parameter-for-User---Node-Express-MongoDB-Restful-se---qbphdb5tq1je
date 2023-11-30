@@ -6,7 +6,6 @@ const app = express();
 app.get('/user/:userId', (req, res) => {
   const { userId } = req.params;
 
-  // Check if userId is present
   if (!userId) {
     return res.status(400).json({
       error: 'Invalid request. userId is missing.',
